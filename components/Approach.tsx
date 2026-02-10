@@ -18,14 +18,14 @@ const steps: Step[] = [
     title: 'Vision & Design',
     description:
       'We begin by understanding your aspirations, lifestyle, and aesthetic preferences. Our design team transforms your vision into detailed architectural plans with complete transparency on timeline and investment.',
-    image: '/exampleHome1.png',
+    image: '/blueprints.jpg',
   },
   {
     number: '02',
     title: 'Crafted Construction',
     description:
       "With permits secured and engineering finalized, master craftsmen bring your home to life. We maintain the highest standards of quality while keeping you informed at every milestone.",
-    image: '/exampleHome2.png',
+    image: '/folsomConstruction.jpg',
   },
   {
     number: '03',

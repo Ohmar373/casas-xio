@@ -87,7 +87,7 @@ export default function About() {
                         <FadeIn delay={0.2}>
                             <div className="relative aspect-4/3 overflow-hidden">
                                 <Image
-                                    src="/exampleHome1.png"
+                                    src="/aboutUSPrudencia.jpg"
                                     alt="Casas XIO craftsmanship"
                                     fill
                                     className="object-cover"

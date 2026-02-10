@@ -98,7 +98,7 @@ export default function Hero() {
             </Link>
             <Link
               href="/experience"
-              className="btn-outline border-white/40 text-white hover:bg-white hover:text-midnight"
+              className="btn-primary bg-white text-midnight hover:bg-ivory"
             >
               Explore Our Process
             </Link>
