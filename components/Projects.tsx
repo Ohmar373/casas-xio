@@ -1,128 +1,127 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+import { FadeIn } from './animations';
 
 interface Project {
   id: number;
-  title: string;
-  location: string;
+  homeStyle: string;
+  address: string;
   image: string;
+  specs?: string;
 }
 
 const projects: Project[] = [
   {
     id: 1,
-    title: 'Modern Family Estate',
-    location: 'McAllen, TX',
+    homeStyle: 'Modern Family Estate',
+    address: 'Palm Valley, McAllen',
     image: '/exampleHome1.png',
+    specs: '4,200 sq ft · 4 Bed · 3.5 Bath',
   },
   {
     id: 2,
-    title: 'Contemporary Luxury Home',
-    location: 'Mission, TX',
+    homeStyle: 'Contemporary Luxury',
+    address: 'Mission Hills, Mission',
     image: '/exampleHome2.png',
+    specs: '3,800 sq ft · 3 Bed · 3 Bath',
   },
   {
     id: 3,
-    title: 'Elegant Ranch Style',
-    location: 'Edinburg, TX',
+    homeStyle: 'Elegant Ranch Style',
+    address: 'Chaparral, Edinburg',
     image: '/CasasXio.jpg',
+    specs: '5,100 sq ft · 5 Bed · 4 Bath',
   },
   {
     id: 4,
-    title: 'Premium Waterfront',
-    location: 'Alamo, TX',
+    homeStyle: 'Premium Waterfront',
+    address: 'Lakeside, Alamo',
     image: '/exampleHome3.png',
-  },
-  {
-    id: 5,
-    title: 'Sophisticated Estate',
-    location: 'San Juan, TX',
-    image: '/exampleHome1.png',
+    specs: '4,600 sq ft · 4 Bed · 4.5 Bath',
   },
 ];
 
 export default function Projects() {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const container = scrollContainerRef.current;
-    if (!container) return;
-
-    let scrollPosition = 0;
-    const scrollSpeed = 0.5; // pixels per frame
-    const maxScroll = container.scrollWidth - container.clientWidth;
-
-    const scroll = () => {
-      scrollPosition += scrollSpeed;
-      if (scrollPosition >= maxScroll) {
-        scrollPosition = 0;
-      }
-      container.scrollLeft = scrollPosition;
-    };
-
-    const interval = setInterval(scroll, 30);
-    return () => clearInterval(interval);
-  }, []);
+  const duplicatedProjects = [...projects, ...projects];
 
   return (
-    <div className="py-20 px-4 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12 text-center text-gray-900">
-          Our Latest Projects
-        </h2>
+    <section className="py-32 bg-ivory overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 mb-16">
+        <FadeIn>
+          <p className="label text-navy text-center mb-4">Portfolio</p>
+        </FadeIn>
+        <FadeIn delay={0.1}>
+          <h2 className="font-serif text-4xl md:text-5xl text-midnight text-center">
+            Crafted With Precision
+          </h2>
+        </FadeIn>
+        <FadeIn delay={0.2}>
+          <p className="mt-6 text-stone text-center max-w-2xl mx-auto text-lg">
+            Every home tells a story of meticulous craftsmanship and thoughtful design
+          </p>
+        </FadeIn>
+      </div>
 
-        {/* Horizontal scrolling container */}
-        <div
-          ref={scrollContainerRef}
-          className="flex gap-8 overflow-x-auto pb-4 scroll-smooth"
-          style={{ scrollBehavior: 'auto' }}
+      {/* Auto-scrolling carousel */}
+      <div className="relative w-full">
+        {/* Gradient overlays for fade effect */}
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-ivory to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-ivory to-transparent z-10 pointer-events-none" />
+        
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="flex gap-8"
+          style={{
+            width: 'fit-content',
+            animation: 'scroll 50s linear infinite',
+          }}
         >
-          {projects.map((project) => (
+          {duplicatedProjects.map((project, index) => (
             <div
-              key={project.id}
-              className="flex-shrink-0 w-80 group cursor-pointer"
+              key={`${project.id}-${index}`}
+              className="flex-shrink-0 w-[700px] group cursor-pointer"
             >
               {/* Image Container */}
-              <div className="relative h-64 w-full rounded-lg overflow-hidden shadow-lg mb-4 transition-transform duration-300 group-hover:shadow-xl">
+              <div className="relative h-[480px] w-full overflow-hidden bg-midnight/5">
                 <Image
                   src={project.image}
-                  alt={project.title}
+                  alt={project.homeStyle}
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  sizes="320px"
-                  priority={false}
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="700px"
+                  priority={index < 4}
+                  unoptimized
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300" />
+                {/* Subtle overlay on hover */}
+                <div className="absolute inset-0 bg-midnight/0 group-hover:bg-midnight/10 transition-colors duration-500" />
               </div>
 
-              {/* Project Title */}
-              <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                {project.title}
-              </h3>
-
-              {/* Location Tag */}
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 rounded-full">
-                <svg
-                  className="w-4 h-4 text-blue-600"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                <span className="text-sm font-medium text-blue-600">
-                  {project.location}
-                </span>
+              {/* Info below image */}
+              <div className="mt-6 px-1">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-8 h-px bg-navy" />
+                  <span className="text-xs tracking-widest uppercase text-stone">
+                    {project.address}
+                  </span>
+                </div>
+                <h3 className="font-serif text-2xl text-midnight group-hover:text-navy transition-colors duration-300">
+                  {project.homeStyle}
+                </h3>
+                {project.specs && (
+                  <p className="mt-2 text-sm text-stone tracking-wide">
+                    {project.specs}
+                  </p>
+                )}
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 }
