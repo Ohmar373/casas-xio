@@ -1,117 +1,186 @@
+'use client';
+
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/animations";
+
+const values = [
+    {
+        title: "Excellence",
+        description: "We pursue excellence in every detail, from design to construction, ensuring the highest quality."
+    },
+    {
+        title: "Transparency",
+        description: "Honesty and open communication guide all our interactions with clients and partners."
+    },
+    {
+        title: "Craftsmanship",
+        description: "Every home is built with meticulous care by skilled craftsmen who take pride in their work."
+    },
+    {
+        title: "Partnership",
+        description: "We believe great homes are built through genuine collaboration with our clients."
+    },
+];
 
 export default function About() {
     return (
-        <div>
+        <div className="bg-ivory">
             <Navbar />
             
             {/* Hero Section */}
-            <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
-                <div className="max-w-6xl mx-auto px-4 text-center">
-                    <h1 className="text-6xl font-bold mb-6">Our Story</h1>
-                    <p className="text-xl max-w-3xl mx-auto">
-                        Discover the passion, vision, and values that drive Casas XIO to create exceptional living spaces.
-                    </p>
+            <section className="relative pt-40 pb-28 bg-midnight overflow-hidden">
+                <div className="absolute inset-0 opacity-5">
+                    <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
+                </div>
+                
+                <div className="max-w-5xl mx-auto px-6 lg:px-8 text-center relative">
+                    <FadeIn>
+                        <p className="label text-slate mb-6">About Casas Xio</p>
+                    </FadeIn>
+                    <FadeIn delay={0.1}>
+                        <h1 className="font-serif text-5xl md:text-7xl text-white mb-6">
+                            Our Story
+                        </h1>
+                    </FadeIn>
+                    <FadeIn delay={0.2}>
+                        <p className="text-xl text-white/70 max-w-2xl mx-auto">
+                            Discover the passion, vision, and values that drive us to create 
+                            exceptional living spaces throughout the Rio Grande Valley.
+                        </p>
+                    </FadeIn>
                 </div>
             </section>
 
             {/* Our History */}
-            <section className="py-20 px-4 bg-white">
-                <div className="max-w-6xl mx-auto">
-                    <h2 className="text-4xl font-bold mb-8 text-gray-900">Our History</h2>
-                    <div className="space-y-6 text-lg text-gray-700">
-                        <p>
-                            Founded over a decade ago, Casas XIO began with a simple yet powerful vision: to transform 
-                            the real estate landscape by creating homes that are not just structures, but sanctuaries 
-                            where families thrive and memories are made.
-                        </p>
-                        <p>
-                            From our humble beginnings, we've grown into a trusted name in the industry, known for our 
-                            unwavering commitment to quality, innovation, and customer satisfaction. Every project we 
-                            undertake reflects our dedication to excellence and our passion for creating spaces that 
-                            inspire and endure.
-                        </p>
-                        <p>
-                            Today, with hundreds of satisfied families calling our properties home, we continue to push 
-                            boundaries and set new standards in residential development. Our journey is a testament to 
-                            the trust our clients place in us and the dedication of our talented team.
-                        </p>
+            <section className="py-32 px-6 lg:px-8 bg-white">
+                <div className="max-w-7xl mx-auto">
+                    <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                        <FadeIn>
+                            <div>
+                                <p className="label text-navy mb-4">Our Heritage</p>
+                                <h2 className="font-serif text-4xl md:text-5xl text-midnight mb-8">
+                                    Building With Purpose
+                                </h2>
+                                <div className="space-y-6 text-lg text-stone leading-relaxed">
+                                    <p>
+                                        Casas XIO was born from a simple yet powerful vision: to transform 
+                                        the custom homebuilding experience in the Rio Grande Valley through 
+                                        transparency, craftsmanship, and genuine partnership.
+                                    </p>
+                                    <p>
+                                        We recognized that building a home is one of life's most significant 
+                                        investments—both financially and emotionally. Our mission became clear: 
+                                        create a process that's as rewarding as the finished home itself.
+                                    </p>
+                                    <p>
+                                        Today, we continue to uphold these principles, treating every project 
+                                        with the care and attention it deserves, and building lasting relationships 
+                                        with the families we serve.
+                                    </p>
+                                </div>
+                            </div>
+                        </FadeIn>
+                        
+                        <FadeIn delay={0.2}>
+                            <div className="relative aspect-4/3 overflow-hidden">
+                                <Image
+                                    src="/exampleHome1.png"
+                                    alt="Casas XIO craftsmanship"
+                                    fill
+                                    className="object-cover"
+                                    unoptimized
+                                />
+                                <div className="absolute inset-0 border border-midnight/10" />
+                            </div>
+                        </FadeIn>
                     </div>
                 </div>
             </section>
 
             {/* Our Values */}
-            <section className="py-20 px-4 bg-gray-50">
-                <div className="max-w-6xl mx-auto">
-                    <h2 className="text-4xl font-bold mb-12 text-center text-gray-900">Our Core Values</h2>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <ValueCard 
-                            title="Excellence" 
-                            description="We pursue excellence in every detail, from design to construction, ensuring the highest quality in all our projects."
-                        />
-                        <ValueCard 
-                            title="Innovation" 
-                            description="We embrace innovative design and sustainable building practices to create homes for the future."
-                        />
-                        <ValueCard 
-                            title="Integrity" 
-                            description="Honesty and transparency guide all our interactions with clients, partners, and communities."
-                        />
-                        <ValueCard 
-                            title="Sustainability" 
-                            description="We're committed to environmentally responsible practices that protect our planet for future generations."
-                        />
-                        <ValueCard 
-                            title="Community" 
-                            description="We build more than homes; we create vibrant communities where neighbors become friends."
-                        />
-                        <ValueCard 
-                            title="Customer Focus" 
-                            description="Your satisfaction is our priority. We listen, understand, and deliver on your dreams."
-                        />
-                    </div>
+            <section className="py-32 px-6 lg:px-8 bg-ivory">
+                <div className="max-w-7xl mx-auto">
+                    <FadeIn>
+                        <div className="text-center mb-20">
+                            <p className="label text-navy mb-4">What Guides Us</p>
+                            <h2 className="font-serif text-4xl md:text-5xl text-midnight">
+                                Our Core Values
+                            </h2>
+                        </div>
+                    </FadeIn>
+                    
+                    <StaggerContainer className="grid md:grid-cols-2 gap-8">
+                        {values.map((value, index) => (
+                            <StaggerItem key={index}>
+                                <div className="bg-white p-10 border border-midnight/10 hover:border-navy/30 transition-colors duration-500 group">
+                                    <div className="flex items-start gap-6">
+                                        <span className="font-serif text-5xl text-navy/30">
+                                            {String(index + 1).padStart(2, '0')}
+                                        </span>
+                                        <div>
+                                            <h3 className="font-serif text-2xl text-midnight mb-3 group-hover:text-navy transition-colors">
+                                                {value.title}
+                                            </h3>
+                                            <p className="text-stone leading-relaxed">
+                                                {value.description}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </StaggerItem>
+                        ))}
+                    </StaggerContainer>
                 </div>
             </section>
 
             {/* Our Mission */}
-            <section className="py-20 px-4 bg-white">
+            <section className="py-32 px-6 lg:px-8 bg-midnight">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-4xl font-bold mb-8 text-gray-900">Our Mission</h2>
-                    <p className="text-xl text-gray-700 leading-relaxed">
-                        To create exceptional living spaces that enhance the quality of life for our clients and communities, 
-                        through innovative design, sustainable practices, and unwavering commitment to excellence. We strive 
-                        to be more than developers—we aim to be partners in building your dreams and shaping the future of 
-                        residential living.
-                    </p>
+                    <FadeIn>
+                        <p className="label text-slate mb-6">Our Promise</p>
+                    </FadeIn>
+                    <FadeIn delay={0.1}>
+                        <blockquote className="font-serif text-3xl md:text-4xl text-white leading-relaxed mb-8">
+                            "To create exceptional custom homes that enhance the quality of life 
+                            for our clients, through thoughtful design, masterful craftsmanship, 
+                            and an unwavering commitment to building trust."
+                        </blockquote>
+                    </FadeIn>
+                    <FadeIn delay={0.2}>
+                        <div className="w-12 h-px bg-slate mx-auto" />
+                    </FadeIn>
                 </div>
             </section>
 
-            {/* Team Section */}
-            <section className="py-20 px-4 bg-gray-50">
-                <div className="max-w-6xl mx-auto">
-                    <h2 className="text-4xl font-bold mb-12 text-center text-gray-900">Meet Our Team</h2>
-                    <p className="text-lg text-gray-700 text-center mb-12 max-w-3xl mx-auto">
-                        Behind every successful project is a team of dedicated professionals who bring expertise, 
-                        creativity, and passion to their work. Our diverse team of architects, engineers, designers, 
-                        and project managers work collaboratively to turn visions into reality.
-                    </p>
-                    <div className="text-center">
-                        <p className="text-gray-600 italic">
-                            "Great homes are built by great people. Our team is our greatest asset."
+            {/* CTA Section */}
+            <section className="py-32 px-6 lg:px-8 bg-white">
+                <div className="max-w-4xl mx-auto text-center">
+                    <FadeIn>
+                        <h2 className="font-serif text-4xl md:text-5xl text-midnight mb-6">
+                            Ready to Build Your <span className="text-navy">Dream Home</span>?
+                        </h2>
+                    </FadeIn>
+                    <FadeIn delay={0.1}>
+                        <p className="text-xl text-stone mb-10 max-w-2xl mx-auto">
+                            Let's start a conversation about bringing your vision to life.
                         </p>
-                    </div>
+                    </FadeIn>
+                    <FadeIn delay={0.2}>
+                        <Link
+                            href="/contact"
+                            className="inline-flex items-center gap-3 px-10 py-5 bg-midnight text-white text-sm font-medium tracking-widest uppercase hover:bg-navy transition-colors duration-300"
+                        >
+                            Get in Touch
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </Link>
+                    </FadeIn>
                 </div>
             </section>
-        </div>
-    );
-}
-
-function ValueCard({ title, description }: { title: string; description: string }) {
-    return (
-        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-            <h3 className="text-2xl font-bold mb-4 text-blue-600">{title}</h3>
-            <p className="text-gray-700">{description}</p>
         </div>
     );
 }
