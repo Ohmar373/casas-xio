@@ -3,50 +3,90 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
-import { motion } from 'framer-motion';
+import { motion, number } from 'framer-motion';
 import { FadeIn, StaggerContainer, StaggerItem } from '@/components/animations';
 
 const experiencePoints = [
   {
     number: '01',
-    title: 'Personalization with Purpose',
+    title: 'Land Acqusition & Architectual Design',
     subtitle: 'It starts with your story.',
     description:
-      'Your home should be a reflection of how you live. Whether you have architectural plans in hand, need help selecting a homesite, or are starting from scratch, we begin with a personal consultation to align on vision, lifestyle, and expectations.',
-    image: '/exampleHome1.png',
+      'We assist clients in finding the perfect plot of land and collaborate with top architects to design a home that reflects your vision, lifestyle, and aspirations. Our team provides clear timelines and transparent budgeting from the very beginning.',
+    image: '/blueprints.jpg',
   },
   {
     number: '02',
-    title: 'Partnership at Every Step',
-    subtitle: 'Expert guidance. Transparent communication.',
+    title: 'Concrete Foundation',
+    subtitle: 'Building the foundation for your dream home.',
     description:
-      "We walk with you through every phase of the process, providing thoughtful recommendations and clear next steps. From land acquisition and architectural coordination to selecting finishes and final walkthroughs, you'll never be left guessing.",
-    image: '/exampleHome2.png',
+      "With permits secured and engineering finalized, we pour the foundation of your home with precision and care. Our team keeps you informed at every milestone, ensuring a smooth construction process built on trust.",
+    image: '/concreteFoundation.png',
   },
   {
     number: '03',
-    title: 'Thoughtful Timelines',
-    subtitle: 'Your time matters. Your trust matters more.',
+    title: 'Framing',
+    subtitle: 'The skeleton of your home takes shape.',
     description:
-      "We keep our project volumes manageable to ensure every home receives the attention it deserves. Our construction process is built around milestone updates, quality checks, and open communication.",
-    image: '/exampleHome3.png',
+      "Skilled craftsmen frame your home with meticulous attention to detail, ensuring structural integrity and quality. We maintain open communication throughout this phase, so you can see your vision come to life while we uphold the highest standards.",
+    image: '/prudenciaFraming.jpg',
   },
   {
     number: '04',
-    title: 'Uncompromising Quality',
-    subtitle: "Excellence isn't optional. It's our standard.",
+    title: 'Roofing & Siding',
+    subtitle: 'Protecting your home with quality materials.',
     description:
-      "Every Casas Xio home is built to exceed local building requirements and stands the test of time. Throughout construction, we conduct rigorous inspections to verify every detail.",
+      "We install durable roofing and siding that not only protect your home but also enhance its aesthetic appeal. Our team works closely with you to select materials that align with your design vision while ensuring long-lasting performance.",
+    image: '/folsomRoofing.jpg',
+  },
+  {
+    number: '04',
+    title: 'Plumbing, Electrical, & HVAC',
+    subtitle: "The vital systems that make your home livable.",
+    description:
+      "Our licensed professionals install plumbing, electrical, and HVAC systems with precision and care. We prioritize quality and safety while keeping you informed about progress and any necessary adjustments to the timeline or budget.",
     image: '/exampleHome1.png',
   },
   {
     number: '05',
-    title: 'Welcome Home',
-    subtitle: "Your journey doesn't end at move-in.",
+    title: 'Spray Foam Insulation',
+    subtitle: "Ensuring energy efficiency and comfort.",
     description:
-      "We stand behind our work long after the last box is unpacked. With post-construction support and a dedicated team always ready to help, we ensure your home remains exceptional.",
-    image: '/exampleHome2.png',
+      "We install high-quality spray foam insulation to create a barrier against temperature fluctuations and noise. This investment in your home's envelope enhances comfort and reduces energy costs.",
+    image: '/exampleHome5.png',
   },
+  {
+    number: '06',
+    title: 'Drywall & Painting',
+    subtitle: "The canvas for your home's interior.",
+    description:
+      "Our team expertly hangs drywall and applies paint with precision, creating a flawless finish that sets the stage for your interior design. We work closely with you to ensure the colors and textures align with your vision.",
+    image: '/prudenciaInterior.jpg',
+  },
+  {
+    number: '07',
+    title: 'Interior & Exterior Finishes',
+    subtitle: "The final touches that make your house a home.",
+    description:
+      "From flooring and cabinetry to paint and fixtures, we bring your design vision to life with expert craftsmanship. We work closely with you to select finishes that reflect your style while ensuring durability and quality.",
+    image: '/prudenciaExterior.jpg',
+  },
+  {
+    number: '08',
+    title: 'Final Inspections & Walkthrough',
+    subtitle: "Ensuring every detail exceeds expectations.",
+    description:
+      "Before we hand over the keys, we conduct rigorous inspections and a comprehensive walkthrough to ensure your new home meets our high standards and your expectations. Our relationship continues beyond move-in with dedicated support for any questions or adjustments.",
+    image: '/shastaInterior.jpg',
+  },
+  {
+    number: '09',
+    title: 'Welcome Home!',
+    subtitle: "Your dream home, built with care and collaboration.",
+    description:
+      "Congratulations on your new home! We are honored to have been part of this journey with you. Our commitment to quality and partnership doesn't end at move-in—we're here for ongoing support and future projects as your needs evolve.",
+    image: '/shastaExteriorblack.jpg',
+  }
 ];
 
 export default function ExperiencePage() {
