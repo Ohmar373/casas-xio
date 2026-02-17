@@ -57,7 +57,7 @@ export default function Approach() {
           <FadeIn delay={0.2}>
             <p className="mt-6 text-lg text-stone">
               Three deliberate phases designed to transform your vision into an 
-              exceptional living space—with clarity, craftsmanship, and care at every step.
+              exceptional living space. Built with clarity, craftsmanship, and care at every step.
             </p>
           </FadeIn>
         </div>
@@ -114,8 +114,8 @@ export default function Approach() {
         <FadeIn delay={0.3}>
           <div className="mt-32 text-center">
             <blockquote className="font-serif text-2xl md:text-3xl text-midnight max-w-3xl mx-auto leading-relaxed">
-              "We don't just build homes—we craft legacies of trust, 
-              transparency, and timeless design."
+              "We don't just build homes. We create lasting relationships built on trust, openness,
+              and beautiful design that stands the test of time."
             </blockquote>
             <div className="mt-12">
               <Link

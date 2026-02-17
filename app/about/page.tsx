@@ -66,7 +66,7 @@ export default function About() {
                                 </h2>
                                 <div className="space-y-6 text-lg text-stone leading-relaxed">
                                     <p>
-                                        Casas XIO was born from a simple yet powerful vision: to transform 
+                                        Casas Xio was born from a simple yet powerful vision: to transform 
                                         the custom homebuilding experience in the Rio Grande Valley through 
                                         transparency, craftsmanship, and genuine partnership.
                                     </p>
@@ -99,6 +99,60 @@ export default function About() {
                     </div>
                 </div>
             </section>
+
+
+
+
+
+
+            {/* What Seperates Us */}
+            <section className="py-32 px-6 lg:px-8 bg-white">
+                <div className="max-w-7xl mx-auto">
+                    <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                        <FadeIn>
+                            <div>
+                                <p className="label text-navy mb-4">Why choose Casas Xio?</p>
+                                <h2 className="font-serif text-4xl md:text-5xl text-midnight mb-8">
+                                    What seperates us from the rest?
+                                </h2>
+                                <div className="space-y-6 text-lg text-stone leading-relaxed">
+                                    <p>
+                                        Choosing Casas Xio means partnering with a builder who truly listens, communicates openly, and puts your needs first. Unlike larger firms, we offer a personalized experience—guiding you through every step, from the first sketch to move-in day, with complete transparency and no surprises.
+                                    </p>
+                                    <p>
+                                        Our team is deeply rooted in the Rio Grande Valley, bringing local expertise and a genuine passion for creating homes that reflect your unique lifestyle. We combine innovative design, quality materials, and masterful craftsmanship to deliver results that consistently exceed expectations.
+                                    </p>
+                                    <p>
+                                        With Casas Xio, you’re not just building a house—you’re gaining a trusted partner dedicated to making your dream home a reality, and a relationship that lasts long after the keys are handed over.
+                                    </p>
+                                </div>
+                            </div>
+                        </FadeIn>
+                        
+                        <FadeIn delay={0.2}>
+                            <div className="relative aspect-4/3 overflow-hidden">
+                                <Image
+                                    src="/aboutUSPrudencia.jpg"
+                                    alt="Casas XIO craftsmanship"
+                                    fill
+                                    className="object-cover"
+                                    unoptimized
+                                />
+                                <div className="absolute inset-0 border border-midnight/10" />
+                            </div>
+                        </FadeIn>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
 
             {/* Our Values */}
             <section className="py-32 px-6 lg:px-8 bg-ivory">

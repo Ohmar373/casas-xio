@@ -84,7 +84,7 @@ const experiencePoints = [
     title: 'Welcome Home!',
     subtitle: "Your dream home, built with care and collaboration.",
     description:
-      "Congratulations on your new home! We are honored to have been part of this journey with you. Our commitment to quality and partnership doesn't end at move-in—we're here for ongoing support and future projects as your needs evolve.",
+      "Congratulations on your new home! We are honored to have been part of this journey with you. Our commitment to quality and partnership doesn't end at move-in. We are always here for ongoing support and future projects as your needs evolve.",
     image: '/shastaExteriorblack.jpg',
   }
 ];
