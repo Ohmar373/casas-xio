@@ -97,6 +97,21 @@ export default function ExperiencePage() {
       {/* Hero Section */}
       <section className="relative pt-40 pb-28 bg-midnight overflow-hidden">
         {/* Subtle pattern overlay */}
+        {/* Background Video */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/folsomWork.mp4" type="video/mp4" />
+        </video>
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-midnight/70" />
+        <div className="absolute inset-0 bg-gradient-to-t from-midnight via-transparent to-midnight/50" />
+      </div>
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
         </div>

@@ -52,7 +52,7 @@ export default function About() {
 
             <FadeIn delay={0.3}>
               <p className="body-lg text-charcoal mb-6">
-                At Casas XIO, we believe a home should be more than shelter—it should be 
+                At Casas Xio, we believe a home should be more than shelter. It should be 
                 a sanctuary. A reflection of who you are and the life you aspire to live.
               </p>
             </FadeIn>

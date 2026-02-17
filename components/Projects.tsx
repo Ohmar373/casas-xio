@@ -38,7 +38,7 @@ const projects: Project[] = [
     id: 4,
     homeStyle: 'Elegant Ranch Style',
     address: 'Lake Havasu, Brownsville',
-    image: '/exampleHome3.png',
+    image: '/LakeHavasuExterior.jpg',
     specs: '1,900 sq ft · 3 Bed · 2.5 Bath',
   },
 ];
