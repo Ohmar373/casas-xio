@@ -5,8 +5,8 @@ import Link from 'next/link';
 import { FadeIn, StaggerContainer, StaggerItem } from './animations';
 
 const stats = [
-  { value: '5+', label: 'Years of Excellence' },
-  { value: '50+', label: 'Homes Delivered' },
+  { value: '3+', label: 'Years of Excellence' },
+  { value: '10+', label: 'Homes Delivered' },
   { value: '100%', label: 'Client Satisfaction' },
   { value: 'RGV', label: 'Proudly Local' },
 ];
