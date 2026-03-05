@@ -144,7 +144,28 @@ body {
 .divider {
   width: 60px;
   height: 1px;
-  background: var(--gold);
+  background: var(--slate);
+}
+
+/* White Outline Button (for use on dark backgrounds) */
+.btn-outline-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.85);
 }
 
 /* Projects carousel animation */
@@ -175,6 +196,17 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Shimmer line animation for premium accents */
+@keyframes shimmer {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+.animate-shimmer {
+  animation: shimmer 3s ease-in-out infinite;
 }
 
 /* Reduced motion support */

@@ -73,7 +73,12 @@ export default function Hero() {
 
           {/* Divider */}
           <motion.div variants={itemVariants} className="flex justify-center">
-            <div className="divider" />
+            <motion.div
+              className="h-px bg-white/40"
+              initial={{ width: 0 }}
+              animate={{ width: 60 }}
+              transition={{ duration: 1, delay: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
+            />
           </motion.div>
 
           {/* Subtitle */}
@@ -98,7 +103,7 @@ export default function Hero() {
             </Link>
             <Link
               href="/experience"
-              className="btn-primary bg-white text-midnight hover:bg-ivory"
+              className="btn-outline-white"
             >
               Explore Our Process
             </Link>

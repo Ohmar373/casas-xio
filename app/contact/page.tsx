@@ -111,7 +111,40 @@ export default function ContactPage() {
 
       {/* Form Section */}
       <section className="py-20 px-6 lg:px-8">
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-5 gap-12 lg:gap-20 items-start">
+
+          {/* Left: Contact Info */}
+          <FadeIn className="lg:col-span-2 lg:pt-4">
+            <div className="space-y-10">
+              <div>
+                <p className="label text-navy mb-3">Direct Contact</p>
+                <h2 className="font-serif text-3xl text-midnight mb-2">Let&apos;s Talk</h2>
+                <div className="w-10 h-px bg-slate mt-4" />
+              </div>
+              <div className="space-y-6 text-stone">
+                <div>
+                  <p className="text-xs tracking-widest uppercase text-midnight mb-1">Phone</p>
+                  <a href="tel:+19565551234" className="text-lg hover:text-midnight transition-colors">(956) 555-1234</a>
+                </div>
+                <div>
+                  <p className="text-xs tracking-widest uppercase text-midnight mb-1">Email</p>
+                  <a href="mailto:hello@casasxio.com" className="text-lg hover:text-midnight transition-colors">hello@casasxio.com</a>
+                </div>
+                <div>
+                  <p className="text-xs tracking-widest uppercase text-midnight mb-1">Service Area</p>
+                  <p className="text-lg">Rio Grande Valley, Texas</p>
+                </div>
+              </div>
+              <div className="pt-2 border-t border-midnight/10">
+                <p className="text-sm text-stone leading-relaxed">
+                  We typically respond within 24 hours on business days. We look forward to hearing about your vision.
+                </p>
+              </div>
+            </div>
+          </FadeIn>
+
+          {/* Right: Form */}
+          <div className="lg:col-span-3">
           <FadeIn>
             <div className="bg-white border border-midnight/10 p-8 md:p-12">
               <form onSubmit={handleSubmit} className="space-y-8">
@@ -284,6 +317,7 @@ export default function ContactPage() {
               </p>
             </div>
           </FadeIn>
+          </div>
         </div>
       </section>
     </div>

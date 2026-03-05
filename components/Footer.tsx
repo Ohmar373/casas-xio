@@ -29,6 +29,9 @@ const navLinks = [
 export default function Footer() {
   return (
     <footer className="bg-midnight text-white/80">
+      {/* Accent top border */}
+      <div className="h-px bg-gradient-to-r from-transparent via-slate/40 to-transparent" />
+
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20">
         <div className="grid gap-16 lg:grid-cols-12">

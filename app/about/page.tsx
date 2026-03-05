@@ -197,14 +197,18 @@ export default function About() {
                         <p className="label text-slate mb-6">Our Promise</p>
                     </FadeIn>
                     <FadeIn delay={0.1}>
-                        <blockquote className="font-serif text-3xl md:text-4xl text-white leading-relaxed mb-8">
-                            "To create exceptional custom homes that enhance the quality of life 
-                            for our clients, through thoughtful design, masterful craftsmanship, 
-                            and an unwavering commitment to building trust."
-                        </blockquote>
+                        <div className="relative max-w-3xl mx-auto">
+                            <span className="font-serif text-8xl text-white/10 leading-none absolute -top-8 left-0 select-none">&ldquo;</span>
+                            <blockquote className="font-serif text-3xl md:text-4xl text-white leading-relaxed px-10">
+                                To create exceptional custom homes that enhance the quality of life
+                                for our clients, through thoughtful design, masterful craftsmanship,
+                                and an unwavering commitment to building trust.
+                            </blockquote>
+                            <span className="font-serif text-8xl text-white/10 leading-none absolute -bottom-12 right-0 select-none">&rdquo;</span>
+                        </div>
                     </FadeIn>
                     <FadeIn delay={0.2}>
-                        <div className="w-12 h-px bg-slate mx-auto" />
+                        <div className="w-12 h-px bg-slate/50 mx-auto mt-10" />
                     </FadeIn>
                 </div>
             </section>
@@ -225,7 +229,7 @@ export default function About() {
                     <FadeIn delay={0.2}>
                         <Link
                             href="/contact"
-                            className="inline-flex items-center gap-3 px-10 py-5 bg-midnight text-white text-sm font-medium tracking-widest uppercase hover:bg-navy transition-colors duration-300"
+                            className="inline-flex items-center gap-3 px-10 py-5 bg-midnight text-white text-sm font-medium tracking-widest uppercase hover:bg-navy hover:shadow-lg hover:shadow-midnight/20 hover:-translate-y-0.5 transition-all duration-300"
                         >
                             Get in Touch
                             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

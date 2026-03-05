@@ -47,7 +47,7 @@ export default function About() {
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <div className="divider mb-8" />
+              <div className="w-14 h-px bg-slate mb-8" />
             </FadeIn>
 
             <FadeIn delay={0.3}>
@@ -99,11 +99,11 @@ export default function About() {
             <StaggerContainer className="grid grid-cols-2 gap-4" staggerDelay={0.1}>
               {stats.map((stat) => (
                 <StaggerItem key={stat.label}>
-                  <div className="bg-white p-6 border-l-2 border-navy">
+                  <div className="bg-white p-6 border-l-2 border-navy hover:border-midnight hover:shadow-md transition-all duration-300">
                     <p className="font-serif text-3xl text-midnight mb-1">
                       {stat.value}
                     </p>
-                    <p className="text-sm text-stone">{stat.label}</p>
+                    <p className="text-sm text-stone tracking-wide">{stat.label}</p>
                   </div>
                 </StaggerItem>
               ))}
@@ -125,8 +125,8 @@ export default function About() {
           <StaggerContainer className="grid md:grid-cols-3 gap-8" staggerDelay={0.15}>
             {values.map((value, index) => (
               <StaggerItem key={value.title}>
-                <div className="group p-8 bg-white border border-ivory hover:border-slate/30 transition-all duration-500">
-                  <span className="font-serif text-5xl text-ivory group-hover:text-navy transition-colors duration-500">
+                <div className="group p-8 bg-white border border-ivory hover:border-slate/30 hover:shadow-lg transition-all duration-500">
+                  <span className="font-serif text-5xl text-midnight/10 group-hover:text-navy/20 transition-colors duration-500">
                     0{index + 1}
                   </span>
                   <h4 className="font-serif text-xl text-midnight mt-4 mb-3">

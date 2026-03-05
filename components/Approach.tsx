@@ -72,9 +72,12 @@ export default function Approach() {
                 {/* Content */}
                 <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                   <div className="flex items-start gap-6">
-                    <span className="font-serif text-6xl text-navy/30">
-                      {step.number}
-                    </span>
+                    <div className="flex flex-col items-center gap-2 flex-shrink-0">
+                      <span className="font-serif text-6xl text-navy/20 leading-none">
+                        {step.number}
+                      </span>
+                      <div className="w-px flex-1 min-h-[3rem] bg-gradient-to-b from-navy/20 to-transparent" />
+                    </div>
                     <div className="pt-2">
                       <h3 className="font-serif text-2xl md:text-3xl text-midnight mb-4">
                         {step.title}
@@ -113,21 +116,24 @@ export default function Approach() {
         {/* Quote & CTA */}
         <FadeIn delay={0.3}>
           <div className="mt-32 text-center">
-            <blockquote className="font-serif text-2xl md:text-3xl text-midnight max-w-3xl mx-auto leading-relaxed">
-              "We don't just build homes. We create lasting relationships built on trust, openness,
-              and beautiful design that stands the test of time."
-            </blockquote>
-            <div className="mt-12">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-3 px-10 py-5 bg-midnight text-white text-sm font-medium tracking-widest uppercase hover:bg-navy transition-colors duration-300"
-              >
-                Begin Your Journey
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
+            <div className="relative max-w-3xl mx-auto">
+              <span className="font-serif text-8xl text-navy/10 leading-none absolute -top-8 left-0 select-none">&ldquo;</span>
+              <blockquote className="font-serif text-2xl md:text-3xl text-midnight leading-relaxed px-10">
+                We don&apos;t just build homes. We create lasting relationships built on trust, openness,
+                and beautiful design that stands the test of time.
+              </blockquote>
+              <span className="font-serif text-8xl text-navy/10 leading-none absolute -bottom-12 right-0 select-none">&rdquo;</span>
             </div>
+            <div className="w-10 h-px bg-slate/50 mx-auto mt-10 mb-12" />
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-3 px-10 py-5 bg-midnight text-white text-sm font-medium tracking-widest uppercase hover:bg-navy transition-colors duration-300 hover:shadow-lg hover:shadow-midnight/20 hover:-translate-y-0.5"
+            >
+              Begin Your Journey
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
           </div>
         </FadeIn>
       </div>

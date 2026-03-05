@@ -40,7 +40,7 @@ const experiencePoints = [
     image: '/folsomRoofing.jpg',
   },
   {
-    number: '04',
+    number: '05',
     title: 'Plumbing, Electrical, & HVAC',
     subtitle: "The vital systems that make your home livable.",
     description:
@@ -48,15 +48,15 @@ const experiencePoints = [
     image: '/exampleHome1.png',
   },
   {
-    number: '05',
+    number: '06',
     title: 'Spray Foam Insulation',
     subtitle: "Ensuring energy efficiency and comfort.",
     description:
       "We install high-quality spray foam insulation to create a barrier against temperature fluctuations and noise. This investment in your home's envelope enhances comfort and reduces energy costs.",
-    image: '/exampleHome5.png',
+    image: '/sprayfoamInsulation.png',
   },
   {
-    number: '06',
+    number: '07',
     title: 'Drywall & Painting',
     subtitle: "The canvas for your home's interior.",
     description:
@@ -64,7 +64,7 @@ const experiencePoints = [
     image: '/prudenciaInterior.jpg',
   },
   {
-    number: '07',
+    number: '08',
     title: 'Interior & Exterior Finishes',
     subtitle: "The final touches that make your house a home.",
     description:
@@ -72,7 +72,7 @@ const experiencePoints = [
     image: '/prudenciaExterior.jpg',
   },
   {
-    number: '08',
+    number: '09',
     title: 'Final Inspections & Walkthrough',
     subtitle: "Ensuring every detail exceeds expectations.",
     description:
@@ -80,7 +80,7 @@ const experiencePoints = [
     image: '/shastaInterior.jpg',
   },
   {
-    number: '09',
+    number: '10',
     title: 'Welcome Home!',
     subtitle: "Your dream home, built with care and collaboration.",
     description:
@@ -264,7 +264,7 @@ export default function ExperiencePage() {
           <FadeIn delay={0.2}>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-3 px-10 py-5 bg-white text-midnight text-sm font-medium tracking-widest uppercase hover:bg-ivory transition-colors duration-300"
+              className="inline-flex items-center gap-3 px-10 py-5 bg-white text-midnight text-sm font-medium tracking-widest uppercase hover:bg-ivory hover:shadow-lg hover:shadow-black/20 hover:-translate-y-0.5 transition-all duration-300"
             >
               Schedule Your Consultation
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
